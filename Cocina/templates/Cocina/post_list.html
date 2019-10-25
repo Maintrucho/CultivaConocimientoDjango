@@ -1,8 +1,13 @@
-<html>
+{% extends 'Cocina/Soporte.html' %}
 
 <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
-</body>
 
-</html>
+    {% block content %} {% for post in posts %}
+    <div>
+
+        <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <p> publicado: {{ post.published_date }}</p>
+    </div>
+    {% endfor %} {% endblock %}
+</body>
