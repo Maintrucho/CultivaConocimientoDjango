@@ -5,9 +5,18 @@ from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
 
+def index(request):
+    return render(request, 'Cocina/index.html', {})
+
+
+def Terminos(request):
+    return render(request, 'Cocina/Terminos.html', {})
+
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'Cocina/post_list.html', {'posts':posts})
+
+    
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'Cocina/post_detail.html', {'post': post})
