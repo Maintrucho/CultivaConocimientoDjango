@@ -4,6 +4,7 @@ from .models import Post
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
+from django.db.models import Q
 
 def index(request):
     return render(request, 'Cocina/index.html', {})
@@ -12,8 +13,20 @@ def index(request):
 def Terminos(request):
     return render(request, 'Cocina/Terminos.html', {})
 
+def login(request):
+    return render(request, 'Cocina/login.html', {})
+
+def registro(request):
+    return render(request, 'Cocina/registro.html', {})
+
 def post_list(request):
+    queryset = request.GET.get("buscar")
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    if queryset:
+        posts = Post.objects.filter(
+            Q(title__icontains = queryset) |
+            Q(text__icontains = queryset) 
+        ).distinct()
     return render(request, 'Cocina/post_list.html', {'posts':posts})
 
     

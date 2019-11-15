@@ -7,13 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'CSS/estilos.css' %}">
+    <link rel="stylesheet " href="{% static 'CSS/flexboxgrid.min.css' %}">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="{% static 'JS/Menu.js' %}"></script>
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-    <link rel="stylesheet " href="{% static 'CSS/flexboxgrid.min.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/estilos.css' %}">
+
     <title>Menu</title>
 
 </head>
@@ -37,34 +38,13 @@
                     <li><a href="# "><span class="icon-happy ">  </span>Cultivo</a></li>
                     <li><a href="{% url 'post_list' %}"><span class="icon-happy2 "> </span>Cocina</a></li>
                     <li><a href="# "><span class="icon-bell ">  </span>Noticias</a></li>
-                    <li><a class="reg " href="# "><span class="icon-key ">  </span>Registro</a></li>
-                    <li><a class="ini " href="# "><span class="icon-unlocked ">  </span>Inicio sesión</a></li>
+                    <li><a href="{% url 'registro' %}"><span class="icon-key ">  </span>Registro</a></li>
+                    <li><a href="{% url 'login' %}"><span class="icon-unlocked ">  </span>Inicio sesión</a></li>
                 </ul>
             </nav>
         </Header>
 
-        <div id="contactForm ">
-            <h1>Registro</h1>
-            <form name="formulario " method="GET ">
-                <input id="nombre " placeholder="Nombre Usuario " type="text " name="nombre " minlength="5 " />
-                <input id="pass " name="pass " placeholder="Contraseña " type="password " minlength="8 " />
-                <input id="pass2 " name="pass2 " placeholder="Confirmar Contraseña " type="password " minlength="8 " />
-                <input name="mail " placeholder="Email " type="email " id="mail " />
-                <input type="checkbox " name="Terminos " id="Terminos "> <a href="{% url 'Terminos' %}" target="_blank ">Acepto los Termino</a><br>
-                <input class="formBtn " name="btn " type="submit " value="Registrarse " onclick="enviado " />
-                <input class="formBtn " type="reset " />
-            </form>
-        </div>
 
-        <div id="iniAcc ">
-            <h1>Inicio Sesion</h1>
-            <form name="formulario " method="GET ">
-                <input id="nombre2 " placeholder="Nombre Usuario " type="text " name="nombre " minlength="5 " />
-                <input id="pass3 " name="pass " placeholder="Contraseña " type="password " minlength="8 " />
-                <input class="formBtn " name="btn " type="submit " value="Iniciar sesión " onclick="enviado " />
-                <input class="formBtn " type="reset " />
-            </form>
-        </div>
 
 
 

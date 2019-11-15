@@ -3,21 +3,6 @@
     padding: 0;
 }
 
-@font-face {
-    font-family: "cabecera";
-    src: url(../fuentes/Beauty\ and\ the\ Beast\ Sample.ttf);
-}
-
-@font-face {
-    font-family: "menu";
-    src: url(../fuente2/JosefinSans-Bold.ttf);
-}
-
-@font-face {
-    font-family: 'fuente2';
-    src: url(../Fuente2/JosefinSans-Light.ttf);
-}
-
 .container-all {
     margin-left: 0;
     width: 100%
@@ -87,55 +72,60 @@ header nav ul li a:hover {
     background: #037E8C;
 }
 
-.boletin {
-    padding: 20px;
-    background: #24282b;
+.imagenEncabezado {
+    background-image: url(../IMG/cannabis_strain_focus_shiva_shanti_banner.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.imagenEncabezado h1 {
+    margin-left: 30%;
+    margin-right: 30%;
+    font-family: cursive;
+    font-size: 50px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-weight: bold;
     color: #CCC;
-    padding-right: 25%;
-    padding-left: 25%;
 }
 
-.boletin h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
-    text-align: center
-}
-
-.boletin p {
-    font-size: 20px;
-    color: #499638;
-    font-family: 'fuente2';
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.responsive {
-    width: 60%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.redes {
-    padding: 50px;
-    background: #fff;
-    color: #000000;
+.page-header {
+    padding: 10px;
+    background: #498638;
+    color: #FFFFFA;
     text-align: center;
     clear: both;
-    border-top: 3px solid #498638;
     font-family: 'fuente2';
 }
 
-.redes span {
-    color: #498638;
-    font-size: 30px;
-    padding: 20px;
+.content-container a {
+    text-decoration: none;
+    color: #469412;
 }
 
-.redes a {
-    text-decoration: none;
+.barra input {
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    border-bottom: 4px solid #499638;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+    transition: all .5s ease;
+    margin-left: 50%;
+}
+
+.content-container {
+    color: #CCC;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 footer {
@@ -145,63 +135,6 @@ footer {
     text-align: center;
     clear: both;
     font-family: 'fuente2';
-}
-
-#contactForm {
-    display: none;
-    border: 6px solid #498638;
-    padding: 2em;
-    color: #FFFFFA;
-    width: 400px;
-    text-align: center;
-    background-image: url(../IMG/capa.png);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%)
-}
-
-input,
-textarea {
-    margin: .8em auto;
-    font-family: inherit;
-    text-transform: inherit;
-    font-size: inherit;
-    display: block;
-    width: 280px;
-    padding: .4em;
-}
-
-textarea {
-    height: 80px;
-    resize: none;
-}
-
-.formBtn {
-    width: 140px;
-    display: inline-block;
-    background: teal;
-    color: #fff;
-    font-weight: 100;
-    font-size: 1.2em;
-    border: none;
-    height: 30px;
-}
-
-#iniAcc {
-    display: none;
-    border: 6px solid #498638;
-    padding: 2em;
-    color: #FFFFFA;
-    width: 400px;
-    text-align: center;
-    background-image: url(../IMG/capa.png);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%)
 }
 
 @media screen and (max-width:1000px) {
@@ -502,5 +435,11 @@ textarea {
     }
     .logo {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .imagenEncabezado h1 {
+        font-size: 30px;
     }
 }

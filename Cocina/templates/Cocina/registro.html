@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet " href="{% static 'CSS/flexboxgrid.min.css' %}">
+    <script src="{% static 'JS/registro.js' %}"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet " href="{% static 'CSS/estiloregistro.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row center-xs">
+            <div class="col-xs-5">
+                <div class="forma">
+                    <h2>Crea tu Cuenta</h2>
+                    <form action="login.html" name="formulario" method="GET">
+                        <input type="text" name="usuario" id="usuario" placeholder="Usuario">
+                        <input type="password" name="pass" id="pass" placeholder="Contraseña">
+                        <input type="password" name="repetir-psw" id="repetirpsw" placeholder="Repetir Contraseña">
+                        <input type="email" name="correo" id="correo" placeholder="Correo Electronico">
+                        <input type="text" name="cell" id="cell" placeholder="Telefono">
+                        <input type="submit" id="btn2" name="btn2" value="Registrar">
+                        <div class="reset-pass">
+                            <a href="{% url 'index' %}">Volver a la pagina principal</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
