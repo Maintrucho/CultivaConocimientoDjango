@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
 from django.db.models import Q
+from django.contrib.auth.forms import UserCreationForm
 
 def index(request):
     return render(request, 'Cocina/index.html', {})
@@ -18,7 +19,7 @@ def redireccion(request):
 
 
 def login(request):
-    return render(request, 'Cocina/login.html', {})
+    return render(request, 'registration/login.html', {})
 
 def registro(request):
     return render(request, 'Cocina/registro.html', {})

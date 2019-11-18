@@ -1,11 +1,12 @@
 from django.urls import path
 from . import views
+from django.contrib.auth.views import LoginView
 
 urlpatterns = [
     path('', views.index, name='index'),
     path('redireccion', views.redireccion, name='redireccion'),
     path('post/list', views.post_list, name='post_list'),
-    path('login', views.login, name='login'),
+    path('login', LoginView.as_view(), name='login'),
     path('registro', views.registro, name='registro'),
     path('terminos', views.Terminos, name='Terminos'),
     path('post/<int:pk>/', views.post_detail, name='post_detail'),

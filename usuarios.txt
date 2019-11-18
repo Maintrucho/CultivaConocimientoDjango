@@ -1,0 +1,11 @@
+
+administrador
+Duoc-Admin
+	robert.carlos.ofi@gmail.com
+	Duoc2019
+
+
+UsuarioUno
+Duoc.2019
+	galileo.ley.gali@gmail.com
+	Duoc.2019

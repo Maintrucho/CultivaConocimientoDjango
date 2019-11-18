@@ -33,6 +33,23 @@ body {
     cursor: pointer;
 }
 
+button {
+    color: #fff;
+    background: #338033;
+    width: 100px;
+    height: 35px;
+    border: 1px solid #338033;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.205);
+    color: #fff;
+}
+
 .forma .toggle span {
     letter-spacing: 1px;
 }
