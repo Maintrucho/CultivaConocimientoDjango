@@ -1,0 +1,19 @@
+body {
+    background-image: url(../IMG/fondoyerba.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+    color: #fff;
+    padding-top: 30px;
+}
+
+body a {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+    color: #fff;
+    padding-top: 10%;
+}

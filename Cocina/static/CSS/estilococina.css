@@ -8,8 +8,27 @@
     width: 100%
 }
 
+button {
+    color: #fff;
+    background: #338033;
+    width: 100px;
+    height: 35px;
+    border: 1px solid #338033;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.205);
+    color: #fff;
+}
+
 body {
-    background: #24282b;
+    background-image: url(../IMG/negro3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
     width: 100%;
     font-family: 'fuente2';
 }
@@ -84,9 +103,13 @@ header nav ul li a:hover {
     font-family: cursive;
     font-size: 50px;
     padding-top: 5%;
-    padding-bottom: 5%;
     font-weight: bold;
     color: #CCC;
+}
+
+#rec {
+    padding-bottom: 20px;
+    ;
 }
 
 .page-header {
@@ -118,6 +141,10 @@ header nav ul li a:hover {
     margin: 0 0 20px 0;
     transition: all .5s ease;
     margin-left: 50%;
+}
+
+.page-header span {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .content-container {

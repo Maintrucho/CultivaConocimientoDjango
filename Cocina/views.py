@@ -13,6 +13,10 @@ def index(request):
 def Terminos(request):
     return render(request, 'Cocina/Terminos.html', {})
 
+def redireccion(request):
+    return render(request, 'Cocina/redireccion.html', {})
+
+
 def login(request):
     return render(request, 'Cocina/login.html', {})
 
@@ -47,18 +51,22 @@ def post_new(request):
     return render(request, 'Cocina/post_edit.html', {'form': form})
 
 def post_edit(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    if request.method == "POST":
-        form = PostForm(request.POST, instance=post)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            post.published_date = timezone.now()
-            post.save()
-            return redirect('post_detail', pk=post.pk)
+    user = request.user
+    if user.has_perm('Cocina.administrador'):
+        post = get_object_or_404(Post, pk=pk)
+        if request.method == "POST":
+            form = PostForm(request.POST, instance=post)
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.author = request.user
+                post.published_date = timezone.now()
+                post.save()
+                return redirect('post_detail', pk=post.pk)
+        else:
+            form = PostForm(instance=post)
+        return render(request, 'Cocina/post_edit.html', {'form': form})
     else:
-        form = PostForm(instance=post)
-    return render(request, 'Cocina/post_edit.html', {'form': form})
+        return render(request,'Cocina/redireccion.html')
 
 
 
